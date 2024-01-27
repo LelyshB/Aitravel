@@ -1,0 +1,691 @@
+/* CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+main {
+  padding: 50px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section h1,
+section h2 {
+  margin-bottom: 20px;
+}
+
+section ul {
+  margin-left: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  nav .menu-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav.show ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav.show ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
+
+/* Smooth Transitions */
+.current-page {
+  animation: page-enter 1s ease-in-out;
+}
+
+.page-enter {
+  animation: page-enter 1s ease-in-out;
+}
+
+.page-exit {
+  animation: page-exit 1s ease-in-out;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/*plan buttons*/
+button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 15rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+/*
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+*/
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+/* Main content */
+main {
+  margin: 5rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 2rem;
+}
+
+
+.black-panel-buttons {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.6rem 1.1em;
+  border: none;
+  border-radius: 14rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.black-panel-buttons:hover {
+  background-color: #3f3e3e;
+}
+
+
+
+
+.get-started-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 16px; 
+
+}
+
+.get-started-btn:hover {
+  background-color: #4d4b4b;
+}
+
+
+/* Page transition animations */
+.current-page {
+  animation: page-enter 1s ease-in-out;
+}
+
+.page-enter {
+  animation: page-enter 1s ease-in-out;
+}
+
+.page-exit {
+  animation: page-exit 1s ease-in-out;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes page-exit {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+ 
+
+/* Styles for specific pages */
+
+/* Index page */
+#index .hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#index .hero h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#index .hero p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+#index .hero button {
+  font-size: 1.5rem;
+}
+
+#index .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#index .card {
+  margin: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+#index .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#index .card-content {
+  padding: 1.5rem;
+}
+
+#index .card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#index .card p {
+  margin-bottom: 1.5rem;
+}
+
+#index .card button {
+  margin-top: 1rem;
+}
+
+/* Plan page */
+.budget-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.budget-range input {
+  width: 48%;
+}
+
+.budget-range-divider {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+#plan .container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+#plan h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#plan form {
+  max-width: 600px;
+  margin: auto;
+}
+
+#plan label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#plan input[type="text"],
+#plan input[type="number"],
+#plan input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+}
+#plan select {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+#plan button[type="submit"] {
+  margin-top: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+input::placeholder {
+  color: transparent;
+}
+.budget-range input::placeholder {
+  color: #ccc;
+}
+
+/* Date fields */
+.travel-date {
+  display: flex;
+  align-items: center;
+}
+
+.travel-date input[type="date"] {
+  width: 49%;
+  margin-right: 2%;
+}
+
+.travel-date span {
+  font-size: 1.2rem;
+  margin: 0 2%;
+}
+
+
+    
+    /* About page */
+    #about .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    }
+    
+    #about h2 {
+    margin-bottom: 2rem;
+    }
+    
+    #about p {
+    margin-bottom: 2rem;
+    }
+    
+    #about button {
+    font-size: 1.5rem;
+    }
+    
+    /* Services page */
+    #services .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    }
+    
+    #services h2 {
+    margin-bottom: 2rem;
+    }
+    
+    #services ul {
+    margin-left: 0;
+    list-style: none;
+    }
+    
+    #services li {
+    margin-bottom: 1rem;
+    }
+    
+    #services li:before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #333;
+    }
+    
+    /* Contact page */
+    #contact .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    }
+    
+    #contact h2 {
+    margin-bottom: 2rem;
+    }
+    
+    #contact form {
+    max-width: 600px;
+    margin: auto;
+    }
+    
+    #contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    }
+    
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    }
+    
+    #contact textarea {
+    height: 150px;
+    }
+    
+    #contact button[type="submit"] {
+    margin-top: 1rem;
+    }
+    
+    /* Responsive media queries */
+    
+    @media only screen and (max-width: 768px) {
+    header {
+    padding: 10px;
+    }
+    
+    .nav-menu {
+    display: none;
+    }
+    
+    .nav-toggle {
+    display: block;
+    }
+    
+    .nav-open {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    z-index: 1;
+    }
+    
+    .nav-open ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+    
+    .nav-open li {
+    margin-top: 1rem;
+    }
+    
+    .nav-open a {
+    font-size: 1.5rem;
+    }
+    }
+    .back-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+    
+    /*checkboxes for plan*/
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label {
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkbox label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.checkbox label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #ccc;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+  background-color: #fff;
+  border-color: #333;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {
+  transform: scale(1);
+}
+/* Checkboxes for fears */
+.checkbox-fear {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.checkbox-fear input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-fear label {
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkbox-fear label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.checkbox-fear label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 6px;
+  height: 2px;
+  background-color: #333;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.checkbox-fear input[type="checkbox"]:checked + label::before {
+  background-color: #333;
+  border-color: #333;
+}
+
+.checkbox-fear input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+/* Alignment for checkboxes */
+.fear {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.fear .checkbox-fear {
+  flex-basis: 45%;
+}
+
+
